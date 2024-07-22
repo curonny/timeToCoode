@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates xml:space="preserve">
+        <t t-name="owl.owl_tags_list" owl="1">
+    <body class="o_web_client d-flex justify-content-center align-items-center vh-100">
+        <div class="row w-100">
+            <div class="col-6">
+                <TagsList tags="crmTags()"/>
+            </div>
+        </div>
+    </body>
+</t>
+
+</templates>

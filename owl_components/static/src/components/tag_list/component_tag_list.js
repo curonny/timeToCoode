@@ -4,11 +4,12 @@ import { getDefaultConfig } from "@web/views/view";
 import { useService } from "@web/core/utils/hooks";
 import { Component, useSubEnv, useState,useRef,onWillStart } from "@odoo/owl";
 import { TagsList } from "@web/core/tags_list/tags_list";
+import { CheckBox } from "@web/core/checkbox/checkbox";
 
 export class TagListCustom extends Component {
 
 static components={
-  TagsList,
+  TagsList,CheckBox
 }
 setup(){
   this.crmTagModel = 'crm.tag';
@@ -16,6 +17,7 @@ setup(){
    this.notification = useService('notification');
   this.state = useState({
      crm_tags:[],
+     checkbox_value: false
   })
 
   onWillStart(async ()=>{
@@ -44,11 +46,9 @@ async getCRMTags(){
   }
   tagOnDelete(ev){
   console.log(ev);
-  const badgetText = ev.target.closest('.badge').textContent.trim();
   const entries = Object.entries(this.state.crm_tags);
   const filtered= entries.filter(([key,value])=> value.name !== badgetText);
   this.state.crm_tags = Object.fromEntries(filtered);
-
   }
 
   tagClicked(ev){
@@ -63,7 +63,15 @@ async getCRMTags(){
     );
   }
 
+  onValueChange(value){
+  this.state.checkbox_value = !this.state.checkbox_value;
+  console.log(this.state.checkbox_value);
+  if(this.state.checkbox_value){
+    document.getElementById("tag_list").style.display = "none";
+  }else{
 
+    document.getElementById("tag_list").style.display = "block";}
+  }
 
 }
 

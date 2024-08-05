@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <data>
 
@@ -8,9 +8,14 @@
             <field name="target">main</field>
         </record>
 
-        <menuitem id="menu_owl_components_root" name="OWL Components"/>
-        <menuitem id="menu_tag_list_client" name="Tag list" parent="menu_owl_components_root" action="action_tag_list_client"
-                  sequence="11"/>
+        <menuitem id="menu_owl_components_root" name="OWL Components" />
+        <menuitem
+            id="menu_tag_list_client"
+            name="Tag list"
+            parent="menu_owl_components_root"
+            action="action_tag_list_client"
+            sequence="11"
+        />
 
     </data>
 </odoo>

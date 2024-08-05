@@ -6,11 +6,10 @@
     "category": "POS",
     "version": "17.0.0.1.0",
     "depends": ["web"],
-    'data': [
+    "data": [
         "views/ir_actions_client.xml",
     ],
-    'assets': {
-        'web.assets_backend': ['owl_components/static/src/**/*'],
+    "assets": {
+        "web.assets_backend": ["owl_components/static/src/**/*"],
     },
-
 }

@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <templates xml:space="preserve">
         <t t-name="owl.owl_tags_list" owl="1">
     <body class="o_web_client d-flex justify-content-center align-items-center vh-100">
         <div class="row w-100" id="tag_list">
             <div class="col-6">
-                <TagsList tags="crmTags()"/>
+                <TagsList tags="crmTags()" />
             </div>
         </div>
-        <br/>
+        <br />
         <div class="col-2">
 </div>
 
-        <CheckBox value="state.checkbox_value"  t-on-change="onValueChange">
+        <CheckBox value="state.checkbox_value" t-on-change="onValueChange">
   Deshabilitar tags
 </CheckBox>
 

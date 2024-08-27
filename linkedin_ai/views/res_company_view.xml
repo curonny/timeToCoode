@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="res_company_linkedin_form_inherit" model="ir.ui.view">
+            <field name="name">res.company.linkedin.form</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="LinkedIn">
+                        <group>
+                            <field name="linkedin_client_id"/>
+                            <field name="linkedin_client_secret" password="True"/>
+                            <field name="linkedin_authorization_code" password="True"/>
+                            <field name="linkedin_entity"/>
+                            <field name="gpt_api_key" password="True"/>
+                            <button string="Connect" type="object"
+                                    name="linkedin_auth" class="btn-primary"/>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+    </data>
+</odoo>
